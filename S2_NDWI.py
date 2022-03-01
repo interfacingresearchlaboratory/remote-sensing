@@ -34,7 +34,7 @@ visualisation2 = {
   'min': 0.004,
   'max': 0.39,
   'bands':['NDWI'],
-  'palette': ['f0ff10','02117e']
+  'palette': ['ffffff','02117e']
 }
 
 Map.addLayer(final_image, visualisation2, 'NDWI')

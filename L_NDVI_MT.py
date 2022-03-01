@@ -6,10 +6,10 @@ from ee_plugin import Map
 #rename bands
 #Load image collections
 
-L4 = ee.ImageCollection("LANDSAT/LT04/C01/T1_TOA").filterBounds(geometry)
-L5 = ee.ImageCollection("LANDSAT/LT05/C01/T1_TOA").filterBounds(geometry)
-L7 = ee.ImageCollection("LANDSAT/LE07/C01/T1_TOA").filterBounds(geometry)
-L8 = ee.ImageCollection("LANDSAT/LC08/C01/T1_TOA").filterBounds(geometry)
+L4 = ee.ImageCollection("LANDSAT/LT04/C01/T1_TOA")
+L5 = ee.ImageCollection("LANDSAT/LT05/C01/T1_TOA")
+L7 = ee.ImageCollection("LANDSAT/LE07/C01/T1_TOA")
+L8 = ee.ImageCollection("LANDSAT/LC08/C01/T1_TOA")
 
 #Collection 1 - Landsat 4 and 5
 C1 = L5.merge(L4) \

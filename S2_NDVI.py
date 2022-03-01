@@ -27,14 +27,13 @@ ndvi = image.expression('(nir-red)/(nir+red)',{
   'red':image.select('B4')
 }).rename('NDVI')
 
-final_image = image.addBands(ndvi) \
-                      .addBands(ndwi)
+final_image = image.addBands(ndvi)
 
 visualisation2 = {
   'min': 0.004,
   'max': 0.39,
   'bands':['NDVI'],
-  'palette': ['f0ff10','02117e']
+  'palette': ['f0ff10','ff5594','0bf532','02117e']
 }
 
 Map.addLayer(final_image, visualisation2, 'NDVI')

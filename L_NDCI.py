@@ -1,7 +1,7 @@
 import ee
 from ee_plugin import Map
 
-#LANDSAT MULTITEMPORAL Normalised Difference Moisture Index
+#LANDSAT Normalised Difference Vegetation Index
 
 def renameBandsOLI(image):
     bands = ['B6','B5','B4', 'B3', 'B2']
@@ -19,27 +19,20 @@ collection_filtered = collection \
     .filterDate('1984-01-01', '2021-10-10') \
     .filter(ee.Filter.calendarRange(2,11,'month')) \
     .filter(ee.Filter.lt('CLOUD_COVER', 7)) \
-    .select(['B4','B5'])
+    .select(['B5','B4'])
 
-image_01 = collection_filtered \
-    .filterDate('1982-01-01', '1992-01-01') \
-    .mean() \
-    .normalizedDifference(['B4', 'B5'])
+NDCI = collection_filtered \
+.filterDate('2018-01-01', '2020-01-01') \
+.mean() \
+.normalizedDifference(['B5', 'B4'])
 
-image_02 = collection_filtered \
-    .filterDate('1997-01-01', '2005-01-01') \
-    .mean() \
-    .normalizedDifference(['B4', 'B5'])
+NDCI2 = NDCI.multiply(-1)
 
-image_03 = collection_filtered \
-    .filterDate('2017-01-01', '2021-01-01') \
-    .mean() \
-    .normalizedDifference(['B4', 'B5'])
+vizParams = {
+  'min': -0.5,
+  'max': 0.5,
+  'palette': ["ffffff","ff2baa","0603b8"]
+}
 
-rgb = ee.Image.cat(image_01, image_02, image_03)
-rgb2 = rgb.multiply(-1)
-
-vizParams = {'min': -0.5, 'max': 0.25, 'gamma': [0.7], 'bands':["nd_2", "nd_1", "nd"]}
-
-Map.addLayer(rgb2, vizParams)
+Map.addLayer(NDCI2, vizParams, 'NDCI')
 Map

@@ -31,7 +31,7 @@ NDCI2 = NDCI.multiply(-1)
 vizParams = {
   'min': -0.5,
   'max': 0.5,
-  'palette': ["ffffff","ff2baa","0603b8"]
+  'palette': ["ffffff","aeaf75","000000"]
 }
 
 Map.addLayer(NDCI2, vizParams, 'NDCI')

@@ -29,7 +29,7 @@ NDMI = collection_filtered \
 vizParams = {
   'min': -0.25,
   'max': 0.5,
-  'palette': ["ffffff","ff6c9b","1106b8"]
+  'palette': ["000000","ffffff"]
 }
 
 Map.addLayer(NDMI, vizParams, 'NDMIchange')

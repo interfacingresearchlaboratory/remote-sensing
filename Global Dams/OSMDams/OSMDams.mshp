@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAGA_METADATA>
+  <HISTORY saga-version="2.3.1">
+    <MODULE library="shapes_tools" id="2" name="Merge Layers">
+      <OPTION type="boolean" id="SRCINFO" name="Add Source Information">TRUE</OPTION>
+      <OPTION type="boolean" id="MATCH" name="Match Fields by Name">TRUE</OPTION>
+      <INPUT_LIST type="shapes_list" id="INPUT" name="Layers">
+        <points type="shapes_list" id="INPUT" name="Layers">
+          <FILE>/media/OSM/OSM/dams/africa-latest.osm.pt.shp/points.shp</FILE>
+        </points>
+        <points type="shapes_list" id="INPUT" name="Layers">
+          <FILE>/media/OSM/OSM/dams/africa-latest.osm.pt.shp/points.shp</FILE>
+        </points>
+        <points type="shapes_list" id="INPUT" name="Layers">
+          <FILE>/media/OSM/OSM/dams/asia-latest.osm.pt.shp/points.shp</FILE>
+        </points>
+        <points type="shapes_list" id="INPUT" name="Layers">
+          <FILE>/media/OSM/OSM/dams/australia-oceania-latest.osm.pt.shp/points.shp</FILE>
+        </points>
+        <points type="shapes_list" id="INPUT" name="Layers">
+          <FILE>/media/OSM/OSM/dams/central-america-latest.osm.pt.shp/points.shp</FILE>
+        </points>
+        <points type="shapes_list" id="INPUT" name="Layers">
+          <FILE>/media/OSM/OSM/dams/europe-latest.osm.pt.shp/points.shp</FILE>
+        </points>
+        <points type="shapes_list" id="INPUT" name="Layers">
+          <FILE>/media/OSM/OSM/dams/north-america-latest.osm.pt.shp/points.shp</FILE>
+        </points>
+        <points type="shapes_list" id="INPUT" name="Layers">
+          <FILE>/media/OSM/OSM/dams/south-america-latest.osm.pt.shp/points.shp</FILE>
+        </points>
+      </INPUT_LIST>
+      <OUTPUT type="shapes" id="MERGED" name="Merged Layer">Merged Layers</OUTPUT>
+    </MODULE>
+  </HISTORY>
+  <SOURCE>
+    <FILE></FILE>
+    <DATABASE>
+      <FIELDS>
+        <FIELD TYPE="STRING">Source</FIELD>
+        <FIELD TYPE="STRING">osm_id</FIELD>
+        <FIELD TYPE="STRING">name</FIELD>
+        <FIELD TYPE="STRING">barrier</FIELD>
+        <FIELD TYPE="STRING">highway</FIELD>
+        <FIELD TYPE="STRING">ref</FIELD>
+        <FIELD TYPE="STRING">address</FIELD>
+        <FIELD TYPE="STRING">is_in</FIELD>
+        <FIELD TYPE="STRING">place</FIELD>
+        <FIELD TYPE="STRING">man_made</FIELD>
+        <FIELD TYPE="STRING">other_tags</FIELD>
+      </FIELDS>
+    </DATABASE>
+    <PROJECTION>
+      <OGC_WKT>GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137,298.257223563]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]]</OGC_WKT>
+      <PROJ4>+proj=longlat +a=6378137.000000 +b=6356752.314245 +no_defs</PROJ4>
+      <EPSG>-1</EPSG>
+    </PROJECTION>
+  </SOURCE>
+  <DESCRIPTION></DESCRIPTION>
+</SAGA_METADATA>

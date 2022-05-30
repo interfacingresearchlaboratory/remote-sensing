@@ -31,12 +31,12 @@ image_03 = collection_filtered \
     .filterDate('2017-01-01', '2021-01-01') \
     .median()
 
-rgb = ee.Image.cat(image_01, image_02, image_03)
+rgb = ee.Image.cat(image_03, image_01, image_01)
 rgb2 = rgb.multiply(-1)
 
-vizParams = {'min': 400, 'max': 2000, 'gamma': [1], 'bands':["B3", "B3_1", "B3_2"]}
+vizParams = {'min': 100, 'max': 2000, 'gamma': [0.4], 'bands':["B3", "B3_1", "B3_2"]}
 vizParams2 = {'min': -4200, 'max': -200, 'gamma': [0.4, 0.4, 0.4], 'bands':["B3", "B3_1", "B3_2"]}
 
-Map.addLayer(rgb, vizParams)
+Map.addLayer(rgb, vizParams, 'L_MT')
 Map
 

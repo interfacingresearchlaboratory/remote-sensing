@@ -36,10 +36,12 @@ image_03 = collection_filtered \
     .mean() \
     .normalizedDifference(['B4', 'B5'])
 
-rgb = ee.Image.cat(image_01, image_02, image_03)
+rgb = ee.Image.cat(image_01, image_03, image_03)
 rgb2 = rgb.multiply(-1)
 
-vizParams = {'min': -0.5, 'max': 0.25, 'gamma': [0.7], 'bands':["nd", "nd_1", "nd_2"]}
+vizParams2 = {'min': -0.5, 'max': 0.25, 'gamma': [0.4], 'bands':["nd_2", "nd_1", "nd"]}
 
-Map.addLayer(rgb2, vizParams, 'NDMI_MT')
+vizParams = {'min': -1, 'max': 1, 'gamma': [0.4], 'bands':["nd_2", "nd_1", "nd"]}
+
+Map.addLayer(rgb2, vizParams2, 'NDMI_MT')
 Map

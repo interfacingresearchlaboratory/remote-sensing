@@ -39,10 +39,10 @@ image_03 = collection_filtered \
 rgb = ee.Image.cat(image_01, image_02, image_03)
 rgb2 = rgb.multiply(-1)
 
-vizParams = {'min': -0.25, 'max': 0.5, 'gamma': [0.4], 'bands':["nd", "nd_1", "nd_2"]}
+vizParams = {'min': -0.5, 'max': 0.5, 'gamma': [0.4], 'bands':["nd", "nd_1", "nd_2"]}
 
 print(rgb)
 
 #Map.setCenter(113.32, 22.75, 10)
-Map.addLayer(rgb2, vizParams)
+Map.addLayer(rgb2, vizParams, 'NDWI_MT')
 Map

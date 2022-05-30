@@ -29,9 +29,9 @@ NDCI = collection_filtered \
 NDCI2 = NDCI.multiply(-1)
 
 vizParams = {
-  'min': -0.5,
-  'max': 0.5,
-  'palette': ["ffffff","aeaf75","000000"]
+  'min': -1,
+  'max': 1,
+  'palette': ["ffffff","00FF00","000000"]
 }
 
 Map.addLayer(NDCI2, vizParams, 'NDCI')

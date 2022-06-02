@@ -19,5 +19,5 @@ vhMaxA = vhAscending.select('VH').max();#.focal_median()
 vhMaxD = vhDescending.select('VH').max();#.focal_median()
 
 # Map composite over the Channel
-Map.addLayer(vhMaxA, {'min': -15, 'max': 5}, 'VH ASC max')
+Map.addLayer(vhMaxA, {'min': -15, 'max': 15}, 'VH ASC max')
 Map

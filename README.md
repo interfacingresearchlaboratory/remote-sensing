@@ -3,7 +3,7 @@ Archive of remote sensing python codes
 
 ## Data Sources:
 | Data | Link                        |
-| ----- |:---------------------------------: |
+| ----- |--------------------------------- |
 | Administrative Boundaries | https://gadm.org/data.html |
 | Global Humanitarian Data | https://data.humdata.org/ |
 | Global Dam Database | http://globaldamwatch.org/data/#core_global |
